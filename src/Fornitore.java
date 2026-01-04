@@ -2,10 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Fornitore extends Thread {
-    private int id; // Matches fornitoreId in Prodotto? Or PIVA is primary?
-    // Prompt says "Ogni prodotto è legato con il fornitore tramite l’attributo id"
-    // And "Nei prodotti sono presenti tutti i prodotti... perciò vi saranno valori N/A".
-    // Let's assume ID is the link.
+    private int id;
     private String piva;
     private String nome;
     private String email;
@@ -29,19 +26,9 @@ public class Fornitore extends Thread {
     @Override
     public void run() {
         for (Prodotto p : prodottiDaFornire) {
-            try {
-                // Determine if we need to supply based on availability?
-                // Or just supply everything associated?
-                // Simulation: Wait a bit, then supply.
-                Thread.sleep(2000 + (long)(Math.random() * 2000));
-                
-                if (!p.isDisponibile()) {
-                    System.out.println("FORNITORE " + nome + ": Rilevato ordine/mancanza per " + p.getTitolo());
-                    p.fornisci(this);
-                }
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            if (!p.isDisponibile()) {
+                System.out.println("FORNITORE " + nome + ": Rilevato ordine/mancanza per " + p.getTitolo());
+                p.fornisci(this);
         }
     }
 }

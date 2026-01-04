@@ -4,9 +4,8 @@ public class Cliente extends Thread {
     private String cognome;
     private String email;
     private String password;
-    // Address fields could be added but omitted for brevity unless needed for specific logic
     
-    private Prodotto prodottoDesiderato; // For simulation
+    private Prodotto prodottoDesiderato;
 
     public Cliente(String cf, String nome, String cognome, String email, String password) {
         this.cf = cf;
@@ -16,7 +15,6 @@ public class Cliente extends Thread {
         this.password = password;
     }
 
-    // Setters/Getters
     public String getCf() { return cf; }
     public String getNome() { return nome; }
     public String getEmail() { return email; }
@@ -31,20 +29,7 @@ public class Cliente extends Thread {
             System.out.println("CLIENTE " + nome + ": Nessun prodotto selezionato.");
             return;
         }
-        
-        try {
-            // Simulation logic
-            System.out.println("CLIENTE " + nome + ": Avvio procedura acquisto per " + prodottoDesiderato.getTitolo());
-            Thread.sleep(1000); // Simulate time
-            
-            // 2a. Ordinare
-            prodottoDesiderato.ordina(this);
-            
-            // 2c. Ricevere (Consegna)
-            prodottoDesiderato.consegna(this);
-            
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        prodottoDesiderato.ordina(this);
+        prodottoDesiderato.consegna(this);
     }
 }
