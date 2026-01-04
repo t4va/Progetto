@@ -29,6 +29,7 @@ public class Fornitore extends Thread {
             if (!p.isDisponibile()) {
                 System.out.println("FORNITORE " + nome + ": Rilevato ordine/mancanza per " + p.getTitolo());
                 p.fornisci(this);
+            }
         }
     }
 }

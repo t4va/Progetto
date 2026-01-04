@@ -41,13 +41,13 @@ public abstract class Prodotto {
         System.out.println("FORNITORE " + fornitore.getNome() + ": Sta fornendo " + titolo + " al magazzino.");
         this.disponibile = true;
         System.out.println("MAGAZZINO: " + titolo + " è ora disponibile.");
-        notifyAll(); // Notify waiting customers
+        notifyAll();
     }
 
     public synchronized void consegna(Cliente cliente) {
         if (disponibile) {
             System.out.println("MAGAZZINO: Consegna di " + titolo + " a " + cliente.getNome() + " completata.");
-            this.disponibile = false; // Consumed? Or just delivered one Unit? Assuming single unit logic for simulation.
+            this.disponibile = false;
             this.dataAcquisto = java.time.LocalDate.now().toString();
         } else {
             System.out.println("MAGAZZINO: Impossibile consegnare " + titolo + ", non disponibile.");
