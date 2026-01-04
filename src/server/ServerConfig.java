@@ -1,3 +1,5 @@
+package server;
+
 public class ServerConfig {
 
     private static ServerConfig Instance = null;
