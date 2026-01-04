@@ -1,4 +1,4 @@
-package server;
+package client;
 
 public class ServerConfig {
 
@@ -19,4 +19,5 @@ public class ServerConfig {
     public String getHOST() {
         return HOST;
     }
+
 }
