@@ -1,5 +1,7 @@
 package server;
 
+import classi_S_C.Prodotto;
+
 public class Tv extends Prodotto {
     private String marca;
     private String modello;

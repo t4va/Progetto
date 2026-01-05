@@ -1,5 +1,7 @@
 package server;
 
+import classi_S_C.Prodotto;
+
 public class Videogame extends Prodotto {
     private String piattaforma;
     private String azienda;

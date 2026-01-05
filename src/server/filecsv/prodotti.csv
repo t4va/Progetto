@@ -1,5 +1,5 @@
 id,disponibile,data_acquisto,prezzo,tipo,titolo,produttore,genere,anno,piattaforma,azienda,marca,modello
-1,False,2025-07-30,19.5,Film,Inception,Christopher Nolan,Fantascienza,2010,Blu-ray,Christopher Nolan,N/A,N/A
+1,True,2025-07-30,19.5,Film,Inception,Christopher Nolan,Fantascienza,2010,Blu-ray,Christopher Nolan,N/A,N/A
 2,False,2018-08-30,13.17,Film,Il Padrino,Francis Ford Coppola,Drammatico,1972,Blu-ray,Francis Ford Coppola,N/A,N/A
 3,False,2021-06-09,10.11,Film,Titanic,James Cameron,Romantico,1997,Blu-ray,James Cameron,N/A,N/A
 4,False,2022-02-04,19.89,Film,Avatar,James Cameron,Fantascienza,2009,Blu-ray,James Cameron,N/A,N/A

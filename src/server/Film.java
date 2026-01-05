@@ -1,5 +1,7 @@
 package server;
 
+import classi_S_C.Prodotto;
+
 public class Film extends Prodotto {
     private String produttore;
     private String genere;
