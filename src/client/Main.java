@@ -15,7 +15,6 @@ public class Main {
             System.out.println("3. Recupero Password");
             System.out.println("0. Esci");
             System.out.print("Scelta: ");
-
             scelta = scanner.nextLine();
 
             switch (scelta) {
